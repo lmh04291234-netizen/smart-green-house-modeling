@@ -3,6 +3,9 @@ import type { User } from "@supabase/supabase-js";
 export const schoolDomain =
   process.env.NEXT_PUBLIC_SCHOOL_EMAIL_DOMAIN?.replace(/^@/, "").toLowerCase() ?? "";
 
+export const googleHostedDomain =
+  process.env.NEXT_PUBLIC_GOOGLE_HOSTED_DOMAIN?.replace(/^@/, "").toLowerCase() || schoolDomain;
+
 export function isSchoolUser(user: User | null): boolean {
   if (!user?.email || !schoolDomain) {
     return false;

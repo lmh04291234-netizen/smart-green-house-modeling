@@ -14,7 +14,13 @@ import {
   X
 } from "lucide-react";
 import Link from "next/link";
-import { isSchoolUser, isValidHttpUrl, normalizeUrl, schoolDomain } from "@/lib/auth";
+import {
+  googleHostedDomain,
+  isSchoolUser,
+  isValidHttpUrl,
+  normalizeUrl,
+  schoolDomain
+} from "@/lib/auth";
 import { Assignment, AssignmentInput, isSupabaseConfigured, supabase } from "@/lib/supabase";
 
 const emptyForm: AssignmentInput = {
@@ -97,7 +103,7 @@ export default function AssignmentPlatform({ page }: AssignmentPlatformProps) {
       provider: "google",
       options: {
         queryParams: {
-          hd: schoolDomain
+          hd: googleHostedDomain
         },
         redirectTo: window.location.origin
       }

@@ -26,6 +26,7 @@ npm install
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 NEXT_PUBLIC_SCHOOL_EMAIL_DOMAIN=cnu.ac.kr
+NEXT_PUBLIC_GOOGLE_HOSTED_DOMAIN=o.cnu.ac.kr
 ```
 
 3. Supabase SQL 실행
